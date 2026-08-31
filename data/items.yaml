@@ -1,0 +1,337 @@
+# Archive of published writing, press, talks, and papers.
+# kind: press | essay | podcast | video | research
+# status: published (shown on the site) | inbox (held for review)
+# Essays are added by hand; the crawler never writes kind: essay.
+
+- id: bloomberg-2026-commercial-fusion
+  kind: video
+  title: Investors Bet on Making Commercial Fusion a Reality
+  url: https://www.bloomberg.com/news/videos/2026-08-19/investors-bet-on-making-commercial-fusion-a-reality-video
+  source: Bloomberg
+  date: 2026-08-19
+  status: published
+  mentions: [name, fuse]
+
+- id: hudson-2026-icf-nuclear-deterrent
+  kind: press
+  title: Inertial Confinement Fusion Is Key to America’s Nuclear Deterrent
+  url: https://www.hudson.org/defense-strategy/inertial-confinement-fusion-key-americas-nuclear-deterrent-rebeccah-heinrichs-madelyn-creedon-abigail-remler
+  source: Hudson Institute
+  date: 2026-08-12
+  status: published
+  mentions: [fuse]
+
+- id: power-2026-neutron-yield
+  kind: press
+  title: Fuse Touts ‘Highest’ Neutron Yield by Any Fusion Company
+  url: https://www.powermag.com/fuse-touts-highest-neutron-yield-by-any-fusion-company/
+  source: POWER
+  date: 2026-08-10
+  status: published
+  mentions: [name, fuse]
+
+- id: exchangemonitor-2026-fuse-ceo-nnsa
+  kind: press
+  title: Fuse CEO sees commercial fusion accelerating NNSA modernization through Nevada partnership
+  url: https://www.exchangemonitor.com/fuse-ceo-sees-commercial-fusion-accelerating-nnsa-modernization-through-nevada-partnership/
+  source: Exchange Monitor
+  date: 2026-08-06
+  status: published
+  mentions: [name, fuse]
+
+- id: exchangemonitor-2026-nnss-agreement
+  kind: press
+  title: Fuse expands NNSA footprint with five-year NNSS agreement
+  url: https://www.exchangemonitor.com/fuse-expands-nnsa-footprint-with-five-year-nnss-agreement/
+  source: Exchange Monitor
+  date: 2026-08-02
+  status: published
+  mentions: [fuse]
+
+- id: forbes-2026-under-30-summit
+  kind: video
+  title: "Disrupting The Old Guard: How New Age Tech Startups Are Securing The Future"
+  url: https://www.forbes.com/video/fc29cd22-4fa3-49c2-af35-ed81d11fc805/2026-under-30--disrupting-the-old-guard-how-new-age-tech-startups-are-securing-the-future/
+  source: Forbes
+  date: 2026-04-24
+  status: published
+  mentions: [name, fuse]
+
+- id: forbes-2026-under-30-summit-recap
+  kind: press
+  title: Live From The 2026 Forbes Under 30 Summit
+  url: https://www.forbes.com/sites/under30newsletter/2026/04/20/live-from-the-2026-forbes-under-30-summit/
+  source: Forbes
+  date: 2026-04-20
+  status: published
+  mentions: [name, fuse]
+
+- id: abq-journal-2026-albuquerque
+  kind: press
+  title: Fuse to open Albuquerque facility, adding to state’s nuclear fusion push
+  url: https://www.abqjournal.com/business/fuse-to-open-albuquerque-facility-adding-to-states-nuclear-fusion-push/3019627
+  source: Albuquerque Journal
+  date: 2026-04-10
+  status: published
+  mentions: [name, fuse]
+
+- id: fox-business-2026-golden-dome
+  kind: video
+  title: Fuse wins $151B Golden Dome contract as missile defense race heats up
+  url: https://www.foxbusiness.com/video/6392867778112
+  source: Fox Business
+  date: 2026-04-10
+  status: published
+  mentions: [name, fuse]
+
+- id: nationalinterest-2026-nuclear-resilience
+  kind: press
+  title: How the Private Sector Can Enable Nuclear Resilience
+  url: https://nationalinterest.org/feature/how-the-private-sector-can-enable-nuclear-resilience
+  source: The National Interest
+  date: 2026-01-15
+  status: published
+  mentions: [fuse]
+
+- id: forbes-2025-30-under-30-energy
+  kind: press
+  title: "30 Under 30 Energy & Green Tech 2026: Meet The Founders Recharging Our Energy Future"
+  url: https://www.forbes.com/sites/christopherhelman/2025/12/02/30-under-30-energy--green-tech-2026-meet-the-founders-recharging-our-energy-future/
+  source: Forbes
+  date: 2025-12-02
+  status: published
+  mentions: [name, fuse]
+
+- id: forbes-2026-30-under-30
+  kind: press
+  title: Forbes 30 Under 30 2026 — Energy & Green Tech
+  url: https://www.forbes.com/30-under-30/2026/energy-green-tech/
+  source: Forbes
+  date: 2025-12-02
+  status: published
+  mentions: [name, fuse]
+
+- id: sourcery-2025-nuclear-race
+  kind: podcast
+  title: "The Nuclear Race to Power Superintelligence"
+  url: https://www.sourcery.vc/p/breaking-nuclear-race-to-power-ai
+  source: Sourcery
+  date: 2025-08-08
+  status: published
+  mentions: [name, fuse]
+
+- id: sourcery-2025-nuclear-race-video
+  kind: video
+  title: Nuclear Race to Power AI
+  url: https://www.youtube.com/watch?v=Q3M1r5_QYNk
+  source: Sourcery
+  date: 2025-08-09
+  status: published
+  mentions: [name, fuse]
+
+- id: scientific-reports-2026-faeton-x
+  kind: research
+  title: Exceeding 10^12 D-D flash neutrons in the 4.5-MA 1-MJ dense plasma focus FAETON-X
+  url: https://www.powermag.com/wp-content/uploads/2026/08/fx-finalpaper.pdf
+  source: Fuse
+  date: 2026-08-11
+  status: published
+  mentions: [name, fuse]
+
+- id: scientific-reports-2025-faeton-i
+  kind: research
+  title: Experimental results and analysis of plasma dynamics and radiation output of the 100 kV dense plasma focus FAETON-I
+  url: https://www.nature.com/articles/s41598-025-07939-x
+  source: Nature, Scientific Reports
+  date: 2025-07-02
+  status: published
+  mentions: [fuse]
+
+- id: business-insider-2025-skipping-college
+  kind: press
+  title: For Gen Z Tech Founders, Skipping College Is the New Dropping Out
+  url: https://www.businessinsider.com/gen-z-tech-founders-skipping-college-new-dropping-out-palantir-2025-6
+  source: Business Insider
+  date: 2025-06-11
+  status: published
+  mentions: [name, fuse]
+
+- id: milken-2025-blow-your-mind
+  kind: video
+  title: Things That Will Blow Your Mind
+  url: https://www.youtube.com/watch?v=Bet0_whZPIQ
+  source: Milken Institute
+  date: 2025-05-07
+  status: published
+  mentions: [name, fuse]
+
+- id: eo-2025-200m-startup
+  kind: video
+  title: I Built a $200M Nuclear Energy Startup at 19
+  url: https://www.youtube.com/watch?v=GkGWBGJlQrs
+  source: EO
+  date: 2025-04-23
+  status: published
+  mentions: [name, fuse]
+
+- id: bbc-2025-commercialise-fusion
+  kind: video
+  title: Inside the lab trying to commercialise nuclear fusion
+  url: https://www.youtube.com/watch?v=2LyARVmSaAE
+  source: BBC News
+  date: 2025-04-20
+  status: published
+  mentions: [fuse]
+
+- id: spacenews-2025-radiation-as-a-service
+  kind: press
+  title: "Radiation as a service: How the private sector can protect America's space infrastructure"
+  url: https://spacenews.com/radiation-as-a-service-how-the-private-sector-can-protect-americas-space-infrastructure/
+  source: SpaceNews
+  date: 2025-03-03
+  status: published
+  mentions: [fuse]
+
+- id: bloomberg-2024-valuation
+  kind: press
+  title: Nuclear Startup Fuse Valued at Over $200 Million in New Funding
+  url: https://www.bloomberg.com/news/articles/2024-09-12/nuclear-startup-fuse-valued-at-over-200-million-in-new-funding
+  source: Bloomberg
+  date: 2024-09-12
+  status: published
+  mentions: [fuse]
+
+- id: wired-2024-opening-ceremony
+  kind: press
+  title: Inside a Fusion Startup's Insane, Top-Secret Opening Ceremony
+  url: https://www.wired.com/story/inside-a-fusion-startups-insane-top-secret-opening-ceremony/
+  source: Wired
+  date: 2024-12-10
+  status: published
+  mentions: [fuse]
+
+- id: reuters-2024-lanl-hire
+  kind: press
+  title: Los Alamos National Laboratory chief engineer joins nuclear fusion startup Fuse
+  url: https://www.reuters.com/technology/los-alamos-national-laboratory-chief-engineer-joins-nuclear-fusion-startup-2024-11-22/
+  source: Reuters
+  date: 2024-11-22
+  status: published
+  mentions: [fuse]
+
+- id: ignition-2024-series-a
+  kind: press
+  title: Fuse Energy Technologies Raises $32M
+  url: https://ignition-news.com/fuse-energy-technologies-raises-32m/
+  source: Ignition
+  date: 2024-09-16
+  status: published
+  mentions: [fuse]
+
+- id: first-principles-2024-titan
+  kind: podcast
+  title: How To Build a 1-Terawatt, 600,000 Amp Pulsed Power Generator
+  url: https://firstprinciples.fm/episodes/how-to-build-a-1-terawatt-600-000-amp-pulsed-power-generator-jc-btaiche-fuse-energy
+  source: First Principles
+  date: 2024-08-07
+  status: published
+  mentions: [name, fuse]
+
+- id: first-principles-2024-titan-video
+  kind: video
+  title: How To Build a 1-Terawatt, 600,000 Amp Pulsed Power Generator
+  url: https://www.youtube.com/watch?v=v6GYVqwmQDQ
+  source: First Principles
+  date: 2024-08-07
+  status: published
+  mentions: [name, fuse]
+
+- id: scientific-reports-2024-img
+  kind: research
+  title: Experimental results of a 330 GW impedance-matched Marx generator
+  url: https://www.nature.com/articles/s41598-024-67774-4
+  source: Nature, Scientific Reports
+  date: 2024-07-23
+  status: published
+  mentions: [name, fuse]
+
+- id: ai-with-sach-2024-energy-crisis
+  kind: podcast
+  title: How Fuse is Transmuting the Energy Crisis into Opportunity
+  url: https://castbox.fm/episode/2---How-Fuse-is-Transmuting-the-Energy-Crisis-into-Opportunity-with-JC-Btaiche---AI-with-Sach-id6228647-id720870124
+  source: AI with Sach
+  date: 2024-07-19
+  status: published
+  mentions: [name, fuse]
+
+- id: forbes-2024-tiny-fusion-startup
+  kind: press
+  title: Why Top Nuclear Experts And Ex-CIA Brass Joined A High School Grad's Tiny Fusion Startup
+  url: https://www.forbes.com/sites/davidjeans/2024/07/03/fuse-fusion-energy-startup-cia/
+  source: Forbes
+  date: 2024-07-03
+  status: published
+  mentions: [name, fuse]
+
+- id: jason-carman-2024-founding
+  kind: video
+  title: "JC Btaiche: Founding a Fusion company at 19"
+  url: https://www.youtube.com/watch?v=AR_9SCqBkdA
+  source: Jason Carman
+  date: 2024-06-06
+  status: published
+  mentions: [name, fuse]
+
+- id: jason-carman-2024-energy-of-stars
+  kind: video
+  title: Harnessing the energy of stars... in a bottle
+  url: https://www.youtube.com/watch?v=IcgfDbGmmVc
+  source: Jason Carman
+  date: 2024-06-03
+  status: published
+  mentions: [name, fuse]
+
+- id: not-boring-2024-profitable-path
+  kind: press
+  title: Fuse Energy - The Potentially Profitable Path to Fusion Power
+  url: https://www.notboring.co/p/fuse-energy
+  source: Not Boring
+  date: 2024-05-30
+  status: published
+  mentions: [fuse]
+
+- id: defensescoop-2024-air-force
+  kind: press
+  title: Air Force invests in new nuclear effects testing prototypes
+  url: https://defensescoop.com/2024/02/28/air-force-invests-in-new-nuclear-effects-testing-prototypes/
+  source: DefenseScoop
+  date: 2024-02-28
+  status: published
+  mentions: [fuse]
+
+- id: age-of-miracles-2023-fusion-race
+  kind: video
+  title: Who Will Win the Fusion Race?
+  url: https://www.youtube.com/watch?v=w8suLtCyGGA
+  source: Age of Miracles
+  date: 2023-12-15
+  status: published
+  mentions: [fuse]
+
+- id: vacuum-2023-maglif
+  kind: research
+  title: "MagLIF: Dynamics and energetics of liner and fuel"
+  url: https://www.sciencedirect.com/science/article/pii/S0042207X23006681
+  source: Vacuum
+  date: 2023-10-01
+  status: published
+  mentions: [name, fuse]
+
+- id: iop-2022-plasma-focus
+  kind: research
+  title: Pushing the limits of existing plasma focus towards 10^16 fusion neutrons with Q = 0.01
+  url: https://iopscience.iop.org/article/10.1088/2058-6272/ac78cc
+  source: Plasma Science and Technology
+  date: 2022-08-22
+  status: published
+  mentions: [fuse]

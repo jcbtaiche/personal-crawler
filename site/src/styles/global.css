@@ -1,0 +1,153 @@
+:root {
+  --bg: #f0eee6;
+  --text: #1f1e1d;
+  --muted: #5e5d59;
+  --border: #d1cfc5;
+  --hover: #5e5d59;
+}
+
+html.dark {
+  --bg: #1f1e1d;
+  --text: #f0eee6;
+  --muted: #b0aea5;
+  --border: #5e5d59;
+  --hover: #d1cfc5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  cursor: url("/cursor.png") 4 37, auto;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Newsreader", "Times New Roman", Times, serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  cursor: url("/cursor.png") 4 37, auto;
+}
+
+a,
+button,
+.toggle {
+  cursor: url("/cursor.png") 4 37, pointer;
+}
+
+.page {
+  position: relative;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 4.5rem 1.75rem 6rem;
+}
+
+.toolbar {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  margin: 0;
+}
+
+.toggle {
+  position: relative;
+  width: 2.4rem;
+  height: 1.15rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  padding: 0;
+}
+
+.toggle::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--text);
+  transition: transform 0.2s ease;
+}
+
+html.dark .toggle::after {
+  transform: translateX(1.05rem);
+}
+
+h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.4rem;
+  line-height: 1.15;
+}
+
+.bio p {
+  margin: 0 0 1.1rem;
+}
+
+.bio p:last-child {
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 2.6rem 0 0.85rem;
+}
+
+.item {
+  margin: 0 0 0.85rem;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+a:hover {
+  color: var(--hover);
+}
+
+.item a {
+  text-underline-offset: 0.22em;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.95em;
+}
+
+.empty {
+  color: var(--muted);
+  font-style: italic;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 3.5rem 1.5rem 4.5rem;
+  }
+
+  .toolbar {
+    top: 1.15rem;
+    right: 1.25rem;
+  }
+
+  h1 {
+    font-size: 2.15rem;
+  }
+
+  body {
+    font-size: 1.15rem;
+  }
+}

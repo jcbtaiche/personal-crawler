@@ -1,0 +1,76 @@
+person_names:
+  - JC Btaiche
+  - J.C. Btaiche
+  - J. C. Btaiche
+  - Jean Christoph Btaiche
+  - Jean-Christoph Btaiche
+  - Jean-Christophe Btaiche
+  - Jean Christophe Btaiche
+  - jcbtaiche
+
+company_names:
+  - Fuse Energy Technologies Corporation
+  - Fuse Energy Technologies Corp
+  - Fuse Energy Technologies
+  - Fuse Federal Enterprise
+  - Fuse Federal
+
+google_news_queries:
+  - '"JC Btaiche" OR "J.C. Btaiche" OR "Jean Christoph Btaiche" OR "Jean-Christoph Btaiche" OR "Jean-Christophe Btaiche"'
+  - '"Fuse Energy Technologies" OR "Fuse Federal"'
+  - '"Fuse Energy" (fusion OR Btaiche OR TITAN OR MagLIF OR "pulsed power" OR FAETON)'
+  - '"Fuse Energy" (Bloomberg OR "National Interest" OR FAETON-X)'
+  - '"Charles Richard" Fuse fusion'
+
+youtube_queries:
+  - JC Btaiche
+  - Jean Christoph Btaiche
+  - '"Fuse Energy" Btaiche'
+  - '"Fuse Energy" Bloomberg'
+
+itunes_queries:
+  - JC Btaiche
+  - Fuse Energy Technologies
+
+crossref_authors:
+  - Btaiche
+
+semantic_scholar_queries:
+  - "JC Btaiche"
+  - "J. C. Btaiche fusion"
+
+fuse_context:
+  - pulsed power
+  - pulsed-power
+  - titan
+  - maglif
+  - faeton
+  - apeiron
+  - btaiche
+  - san leandro
+  - radiation effects
+  - radiation testing
+  - impedance-matched
+  - marx generator
+  - dense plasma focus
+  - neutron yield
+  - fuse federal
+  - fuse energy technologies
+
+exclude_patterns:
+  - octopus energy
+  - prepayment meter
+  - standing charge
+  - energy tariff
+  - cheap electricity
+  - fuse box
+  - circuit breaker
+  - uk energy retailer
+  - ev charger
+  - alan chang
+  - community solar
+  - electricity supplier
+  - household energy
+  - smart meter
+  - energy bills
+
