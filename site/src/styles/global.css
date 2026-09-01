@@ -99,7 +99,7 @@ h1 {
 
 .pl-bio {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 148px;
+  grid-template-columns: minmax(0, 1fr) 196px;
   gap: 2.75rem;
   align-items: start;
 }
@@ -112,12 +112,12 @@ h1 {
 }
 
 .pl-shot {
-  width: 148px;
-  height: 186px;
+  width: 196px;
+  height: 246px;
   padding: 0;
   border: 0;
   display: block;
-  background: var(--border);
+  background: transparent;
   transition: opacity 0.15s ease;
 }
 
@@ -156,14 +156,10 @@ h1 {
   inset: 0;
   z-index: 40;
   padding: 40px;
-  background: rgba(20, 19, 17, 0.42);
+  background: transparent;
   display: none;
   align-items: center;
   justify-content: center;
-}
-
-html.dark .pl-overlay {
-  background: rgba(0, 0, 0, 0.55);
 }
 
 .pl-overlay[data-open="true"] {
@@ -173,15 +169,14 @@ html.dark .pl-overlay {
 .pl-panel {
   background: var(--bg);
   width: 100%;
-  max-width: 860px;
+  max-width: 960px;
   max-height: 100%;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 300px;
-  box-shadow: 0 24px 60px rgba(20, 19, 17, 0.22);
 }
 
 .pl-preview {
-  background: var(--border);
+  background: transparent;
   padding: 28px;
   display: flex;
   align-items: center;
@@ -190,7 +185,7 @@ html.dark .pl-overlay {
 
 .pl-preview img {
   max-width: 100%;
-  max-height: 460px;
+  max-height: 560px;
   display: block;
 }
 
@@ -326,8 +321,8 @@ html.dark .pl-overlay {
   }
 
   .pl-shot {
-    width: 116px;
-    height: 145px;
+    width: 148px;
+    height: 186px;
   }
 
   .pl-overlay {
