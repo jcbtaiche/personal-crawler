@@ -6,6 +6,60 @@ const items = loadPublishedItems();
 const byKind = Object.fromEntries(
   sections.map((section) => [section.kind, items.filter((item) => item.kind === section.kind)]),
 );
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+const photoBase = `${base}photos/`;
+const photos = [
+  {
+    file: "btaiche-headshot.jpg",
+    thumb: "btaiche-headshot-thumb.jpg",
+    label: "headshot",
+    dims: "3072 × 2047",
+    credit: "Preferred. Credit: Fuse",
+    alt: "JC Btaiche, colour portrait",
+  },
+  {
+    file: "btaiche-facility.jpg",
+    thumb: "btaiche-facility-thumb.jpg",
+    label: "at Fuse",
+    dims: "2048 × 1367",
+    credit: "Credit: Fuse",
+    alt: "JC Btaiche at the Fuse facility",
+  },
+  {
+    file: "btaiche-flying.jpg",
+    thumb: "btaiche-flying-thumb.jpg",
+    label: "cockpit",
+    dims: "1222 × 939",
+    credit: "Personal",
+    alt: "JC Btaiche flying a small plane",
+  },
+  {
+    file: "btaiche-kilimanjaro.jpg",
+    thumb: "btaiche-kilimanjaro-thumb.jpg",
+    label: "Kilimanjaro",
+    dims: "1320 × 2010",
+    credit: "Personal",
+    alt: "JC Btaiche at Uhuru Peak, Mount Kilimanjaro",
+  },
+  {
+    file: "btaiche-lobuche.jpg",
+    thumb: "btaiche-lobuche-thumb.jpg",
+    label: "Lobuche East",
+    dims: "5712 × 4284",
+    credit: "Personal",
+    alt: "JC Btaiche on the summit of Lobuche East",
+  },
+  {
+    file: "btaiche-everest.jpg",
+    thumb: "btaiche-everest-thumb.jpg",
+    label: "Everest Base Camp",
+    dims: "5712 × 4284",
+    credit: "Personal",
+    alt: "JC Btaiche at Everest Base Camp",
+  },
+];
 ---
 
 <!doctype html>
@@ -23,7 +77,7 @@ const byKind = Object.fromEntries(
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap"
       rel="stylesheet"
     />
     <script is:inline>
@@ -46,22 +100,31 @@ const byKind = Object.fromEntries(
 
       <h1>JC Btaiche</h1>
 
-      <div class="bio">
-        <p>
-          JC is the Founder and CEO of
-          <a href="https://www.f.energy">Fuse</a>. The company’s mission is to accelerate the
-          world’s transition to fusion energy while safeguarding humankind. Fuse builds
-          pulsed-power generators that enable radiation effects testing today and are the
-          building block for fusion energy.
-        </p>
-        <p>
-          Fuse serves commercial and defense customers and partners with Los Alamos, Sandia
-          National Laboratories, and the Nevada National Security Sites. Fuse is known for
-          TITAN and FAETON, first-of-a-kind fusion generators whose experimental results were
-          peer-reviewed in Nature Scientific Reports.
-        </p>
-        <p>JC skipped university to start Fuse. The company has raised more than $100 million.</p>
-        <p>He flies small planes, climbs mountains, and makes tea.</p>
+      <div class="pl-bio">
+        <div class="bio">
+          <p>
+            JC is the Founder and CEO of
+            <a href="https://www.f.energy">Fuse</a>. The company’s mission is to accelerate the
+            world’s transition to fusion energy while safeguarding humankind. Fuse builds
+            pulsed-power generators that enable radiation effects testing today and are the
+            building block for fusion energy.
+          </p>
+          <p>
+            Fuse serves commercial and defense customers and partners with Los Alamos, Sandia
+            National Laboratories, and the Nevada National Security Sites. Fuse is known for
+            TITAN and FAETON, first-of-a-kind fusion generators whose experimental results were
+            peer-reviewed in Nature Scientific Reports.
+          </p>
+          <p>JC skipped university to build Fuse. The company has raised more than $100 million.</p>
+          <p>He flies small planes, climbs mountains, and makes tea.</p>
+        </div>
+
+        <aside class="pl-margin">
+          <button class="pl-shot" type="button" data-pl-open aria-haspopup="dialog">
+            <img src={`${photoBase}${photos[0].thumb}`} alt={photos[0].alt} />
+          </button>
+          <button class="pl-cue" type="button" data-pl-open>Photos ↗</button>
+        </aside>
       </div>
 
       {
@@ -86,6 +149,28 @@ const byKind = Object.fromEntries(
       }
     </main>
 
+    <div class="pl-overlay" data-pl-overlay data-open="false" role="dialog" aria-modal="true" aria-label="Photos">
+      <div class="pl-panel">
+        <div class="pl-preview">
+          <img data-pl-preview src="" alt="" />
+        </div>
+        <div class="pl-side">
+          <div class="pl-head">
+            <span data-pl-count></span>
+            <button class="pl-x" type="button" data-pl-close aria-label="Close">✕</button>
+          </div>
+          <div class="pl-list" data-pl-list></div>
+          <div class="pl-meta">
+            <div class="pl-file" data-pl-filename></div>
+            <div class="pl-dims" data-pl-dims></div>
+            <div class="pl-links">
+              <a data-pl-download href="" download>Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script is:inline>
       const themeBtn = document.getElementById("theme-toggle");
       if (themeBtn) {
@@ -95,6 +180,76 @@ const byKind = Object.fromEntries(
           localStorage.setItem("darkMode", String(next));
         });
       }
+    </script>
+    <script is:inline define:vars={{ photoBase, photos }}>
+      (function () {
+        var overlay = document.querySelector("[data-pl-overlay]");
+        if (!overlay) return;
+        var list = overlay.querySelector("[data-pl-list]");
+        var preview = overlay.querySelector("[data-pl-preview]");
+        var count = overlay.querySelector("[data-pl-count]");
+        var filename = overlay.querySelector("[data-pl-filename]");
+        var dims = overlay.querySelector("[data-pl-dims]");
+        var dl = overlay.querySelector("[data-pl-download]");
+        var rows = [];
+        var lastFocus = null;
+
+        count.textContent = "Photos — " + photos.length + " files";
+
+        photos.forEach(function (p, i) {
+          var row = document.createElement("button");
+          row.type = "button";
+          row.className = "pl-row";
+          row.innerHTML =
+            '<img src="' + photoBase + p.thumb + '" alt="">' +
+            "<div><b></b><small></small></div>";
+          row.querySelector("b").textContent = p.label;
+          row.querySelector("small").textContent = p.dims;
+          row.addEventListener("click", function () {
+            select(i);
+          });
+          list.appendChild(row);
+          rows.push(row);
+        });
+
+        function select(i) {
+          var p = photos[i];
+          rows.forEach(function (r, n) {
+            r.setAttribute("aria-current", n === i ? "true" : "false");
+          });
+          preview.src = photoBase + p.file;
+          preview.alt = p.alt || p.label;
+          filename.textContent = p.file;
+          dims.textContent = p.dims + " · " + p.credit;
+          dl.href = photoBase + p.file;
+        }
+
+        function open() {
+          lastFocus = document.activeElement;
+          overlay.dataset.open = "true";
+          document.body.style.overflow = "hidden";
+          overlay.querySelector("[data-pl-close]").focus();
+        }
+
+        function close() {
+          overlay.dataset.open = "false";
+          document.body.style.overflow = "";
+          if (lastFocus) lastFocus.focus();
+        }
+
+        document.querySelectorAll("[data-pl-open]").forEach(function (b) {
+          b.addEventListener("click", open);
+        });
+        overlay.querySelector("[data-pl-close]").addEventListener("click", close);
+        overlay.addEventListener("click", function (e) {
+          if (e.target === overlay) close();
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && overlay.dataset.open === "true") close();
+        });
+
+        select(0);
+      })();
     </script>
   </body>
 </html>
