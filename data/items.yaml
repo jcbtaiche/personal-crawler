@@ -460,3 +460,22 @@
   status: "published"
   mentions:
     - "fuse"
+- id: "vacuum-2023-maglif"
+  kind: "research"
+  title: "MagLIF: Dynamics and energetics of liner and fuel"
+  url: "https://www.sciencedirect.com/science/article/pii/S0042207X23006681"
+  source: "Vacuum"
+  date: "2023-10-01"
+  status: "published"
+  mentions:
+    - "name"
+    - "fuse"
+- id: "iop-2022-plasma-focus"
+  kind: "research"
+  title: "Pushing the limits of existing plasma focus towards 10^16 fusion neutrons with Q = 0.01"
+  url: "https://iopscience.iop.org/article/10.1088/2058-6272/ac78cc"
+  source: "Plasma Science and Technology"
+  date: "2022-08-22"
+  status: "published"
+  mentions:
+    - "fuse"
