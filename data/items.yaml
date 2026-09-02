@@ -3,6 +3,35 @@
 # status: published (shown on the site) | inbox (held for review)
 # Essays are added by hand; the crawler never writes kind: essay.
 
+- id: "springer-science-and-business-media-llc-2026-exceeding-1012-d-d-flash-ne"
+  kind: "research"
+  title: "Exceeding 1012 D-D flash neutrons in the 4.5-MA 1-MJ dense plasma focus FAETON-X"
+  url: "https://doi.org/10.21203/rs.3.rs-10657590/v1"
+  source: "Springer Science and Business Media LLC"
+  date: "2026-08-12"
+  status: "published"
+  mentions:
+    - "name"
+    - "fuse"
+- id: "springer-science-and-business-media-llc-2025-faeton-i-investigation-of-p"
+  kind: "research"
+  title: "Faeton-I: Investigation of plasma dynamics and radiation output of a 100 kV plasma focus device"
+  url: "https://doi.org/10.21203/rs.3.rs-6466595/v1"
+  source: "Springer Science and Business Media LLC"
+  date: "2025-04-18"
+  status: "published"
+  mentions:
+    - "name"
+- id: "transactions-of-the-american-nuclear-society-2025-fuses-capabilities-for"
+  kind: "research"
+  title: "Fuse's capabilities for nuclear security and fusion energy"
+  url: "https://doi.org/10.13182/t133-49345"
+  source: "Transactions of the American Nuclear Society"
+  date: "2025-01-01"
+  status: "published"
+  mentions:
+    - "name"
+    - "fuse"
 - id: "atoms-not-bits-2026-interview-with-jc-btaiche"
   kind: "video"
   title: "Interview with JC Btaiche - Founder & CEO, Fuse Energy"
