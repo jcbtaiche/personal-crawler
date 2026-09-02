@@ -157,7 +157,11 @@ const photos = [
       </div>
 
       <div class="pl-stage" data-pl-stop>
-        <img data-pl-preview src="" alt="" />
+        <div class="pl-frame">
+          <button class="pl-nav" type="button" data-pl-prev aria-label="Previous photo">‹</button>
+          <img data-pl-preview src="" alt="" />
+          <button class="pl-nav" type="button" data-pl-next aria-label="Next photo">›</button>
+        </div>
         <div class="pl-meta">
           <span data-pl-label></span>
           <span class="pl-dim" data-pl-dims></span>
@@ -192,7 +196,10 @@ const photos = [
         var credit = sheet.querySelector("[data-pl-credit]");
         var dl = sheet.querySelector("[data-pl-download]");
         var closeBtn = sheet.querySelector("[data-pl-close]");
+        var prevBtn = sheet.querySelector("[data-pl-prev]");
+        var nextBtn = sheet.querySelector("[data-pl-next]");
         var thumbs = [];
+        var current = 0;
         var lastFocus = null;
 
         photos.forEach(function (p, i) {
@@ -208,9 +215,10 @@ const photos = [
         });
 
         function select(i) {
-          var p = photos[i];
+          current = (i + photos.length) % photos.length;
+          var p = photos[current];
           thumbs.forEach(function (t, n) {
-            t.setAttribute("aria-current", n === i ? "true" : "false");
+            t.setAttribute("aria-current", n === current ? "true" : "false");
           });
           preview.src = photoBase + p.file;
           preview.alt = p.alt || p.label;
@@ -238,11 +246,20 @@ const photos = [
           b.addEventListener("click", open);
         });
         closeBtn.addEventListener("click", close);
+        prevBtn.addEventListener("click", function () {
+          select(current - 1);
+        });
+        nextBtn.addEventListener("click", function () {
+          select(current + 1);
+        });
         sheet.addEventListener("click", function (e) {
           if (!e.target.closest("[data-pl-stop]") && !e.target.closest("[data-pl-close]")) close();
         });
         document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape" && sheet.dataset.open === "true") close();
+          if (sheet.dataset.open !== "true") return;
+          if (e.key === "Escape") close();
+          if (e.key === "ArrowLeft") select(current - 1);
+          if (e.key === "ArrowRight") select(current + 1);
         });
 
         select(0);
