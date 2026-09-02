@@ -15,7 +15,7 @@ const photos = [
     file: "btaiche-headshot.jpg",
     thumb: "btaiche-headshot-thumb.jpg",
     label: "btaiche-headshot.jpg",
-    dims: "3072 × 2047",
+    dims: "1638 × 2047",
     credit: "Preferred. Credit: Fuse",
     alt: "JC Btaiche, colour portrait",
   },
@@ -23,7 +23,7 @@ const photos = [
     file: "btaiche-facility.jpg",
     thumb: "btaiche-facility-thumb.jpg",
     label: "btaiche-facility.jpg",
-    dims: "2048 × 1367",
+    dims: "1094 × 1367",
     credit: "Credit: Fuse",
     alt: "JC Btaiche at the Fuse facility",
   },
@@ -31,7 +31,7 @@ const photos = [
     file: "btaiche-flying.jpg",
     thumb: "btaiche-flying-thumb.jpg",
     label: "btaiche-flying.jpg",
-    dims: "1222 × 939",
+    dims: "751 × 939",
     credit: "Personal",
     alt: "JC Btaiche flying a small plane",
   },
@@ -39,7 +39,7 @@ const photos = [
     file: "btaiche-kilimanjaro.jpg",
     thumb: "btaiche-kilimanjaro-thumb.jpg",
     label: "btaiche-kilimanjaro.jpg",
-    dims: "1320 × 2010",
+    dims: "1320 × 1650",
     credit: "Personal",
     alt: "JC Btaiche at Uhuru Peak, Mount Kilimanjaro",
   },
@@ -47,7 +47,7 @@ const photos = [
     file: "btaiche-lobuche.jpg",
     thumb: "btaiche-lobuche-thumb.jpg",
     label: "btaiche-lobuche.jpg",
-    dims: "5712 × 4284",
+    dims: "2400 × 3000",
     credit: "Personal",
     alt: "JC Btaiche on the summit of Lobuche East",
   },
@@ -55,7 +55,7 @@ const photos = [
     file: "btaiche-everest.jpg",
     thumb: "btaiche-everest-thumb.jpg",
     label: "btaiche-everest.jpg",
-    dims: "5712 × 4284",
+    dims: "2400 × 3000",
     credit: "Personal",
     alt: "JC Btaiche at Everest Base Camp",
   },
@@ -119,12 +119,13 @@ const photos = [
           <p>He flies small planes, climbs mountains, and makes tea.</p>
         </div>
 
-        <aside class="pl-margin">
-          <button class="pl-shot" type="button" data-pl-open aria-haspopup="dialog">
-            <img src={`${photoBase}${photos[0].thumb}`} alt={photos[0].alt} />
-          </button>
-          <button class="pl-cue" type="button" data-pl-open>Photos ↗</button>
-        </aside>
+        <button class="pl-shot" type="button" data-pl-open aria-haspopup="dialog">
+          <img src={`${photoBase}${photos[0].thumb}`} alt={photos[0].alt} />
+          <span class="pl-cue">
+            <span>Credit: Fuse</span>
+            <b>{photos.length} photos ↗</b>
+          </span>
+        </button>
       </div>
 
       {
@@ -149,25 +150,24 @@ const photos = [
       }
     </main>
 
-    <div class="pl-overlay" data-pl-overlay data-open="false" role="dialog" aria-modal="true" aria-label="Photos">
-      <div class="pl-panel">
-        <div class="pl-preview">
-          <img data-pl-preview src="" alt="" />
+    <div class="pl-sheet" data-pl-sheet data-open="false" role="dialog" aria-modal="true" aria-label="Press photos">
+      <div class="pl-sheet-top">
+        <span>JC Btaiche — press photos</span>
+        <button class="pl-close" type="button" data-pl-close>Close (esc)</button>
+      </div>
+
+      <div class="pl-stage" data-pl-stop>
+        <img data-pl-preview src="" alt="" />
+        <div class="pl-meta">
+          <span data-pl-label></span>
+          <span class="pl-dim" data-pl-dims></span>
+          <span class="pl-dim" data-pl-credit></span>
+          <a data-pl-download href="" download>Download</a>
         </div>
-        <div class="pl-side">
-          <div class="pl-head">
-            <span data-pl-count></span>
-            <button class="pl-x" type="button" data-pl-close aria-label="Close">✕</button>
-          </div>
-          <div class="pl-list" data-pl-list></div>
-          <div class="pl-meta">
-            <div class="pl-file" data-pl-filename></div>
-            <div class="pl-dims" data-pl-dims></div>
-            <div class="pl-links">
-              <a data-pl-download href="" download>Download</a>
-            </div>
-          </div>
-        </div>
+      </div>
+
+      <div class="pl-sheet-bottom" data-pl-stop>
+        <div class="pl-strip" data-pl-strip></div>
       </div>
     </div>
 
@@ -183,56 +183,53 @@ const photos = [
     </script>
     <script is:inline define:vars={{ photoBase, photos }}>
       (function () {
-        var overlay = document.querySelector("[data-pl-overlay]");
-        if (!overlay) return;
-        var list = overlay.querySelector("[data-pl-list]");
-        var preview = overlay.querySelector("[data-pl-preview]");
-        var count = overlay.querySelector("[data-pl-count]");
-        var filename = overlay.querySelector("[data-pl-filename]");
-        var dims = overlay.querySelector("[data-pl-dims]");
-        var dl = overlay.querySelector("[data-pl-download]");
-        var rows = [];
+        var sheet = document.querySelector("[data-pl-sheet]");
+        if (!sheet) return;
+        var strip = sheet.querySelector("[data-pl-strip]");
+        var preview = sheet.querySelector("[data-pl-preview]");
+        var label = sheet.querySelector("[data-pl-label]");
+        var dims = sheet.querySelector("[data-pl-dims]");
+        var credit = sheet.querySelector("[data-pl-credit]");
+        var dl = sheet.querySelector("[data-pl-download]");
+        var closeBtn = sheet.querySelector("[data-pl-close]");
+        var thumbs = [];
         var lastFocus = null;
 
-        count.textContent = "Photos — " + photos.length + " files";
-
         photos.forEach(function (p, i) {
-          var row = document.createElement("button");
-          row.type = "button";
-          row.className = "pl-row";
-          row.innerHTML =
-            '<img src="' + photoBase + p.thumb + '" alt="">' +
-            "<div><b></b><small></small></div>";
-          row.querySelector("b").textContent = p.label;
-          row.querySelector("small").textContent = p.dims;
-          row.addEventListener("click", function () {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.setAttribute("aria-label", p.label);
+          b.innerHTML = '<img src="' + photoBase + p.thumb + '" alt="">';
+          b.addEventListener("click", function () {
             select(i);
           });
-          list.appendChild(row);
-          rows.push(row);
+          strip.appendChild(b);
+          thumbs.push(b);
         });
 
         function select(i) {
           var p = photos[i];
-          rows.forEach(function (r, n) {
-            r.setAttribute("aria-current", n === i ? "true" : "false");
+          thumbs.forEach(function (t, n) {
+            t.setAttribute("aria-current", n === i ? "true" : "false");
           });
           preview.src = photoBase + p.file;
           preview.alt = p.alt || p.label;
-          filename.textContent = p.file;
-          dims.textContent = p.dims + " · " + p.credit;
+          label.textContent = p.label;
+          dims.textContent = p.dims;
+          credit.textContent = p.credit;
           dl.href = photoBase + p.file;
+          dl.setAttribute("download", p.file);
         }
 
         function open() {
           lastFocus = document.activeElement;
-          overlay.dataset.open = "true";
+          sheet.dataset.open = "true";
           document.body.style.overflow = "hidden";
-          overlay.querySelector("[data-pl-close]").focus();
+          closeBtn.focus();
         }
 
         function close() {
-          overlay.dataset.open = "false";
+          sheet.dataset.open = "false";
           document.body.style.overflow = "";
           if (lastFocus) lastFocus.focus();
         }
@@ -240,12 +237,12 @@ const photos = [
         document.querySelectorAll("[data-pl-open]").forEach(function (b) {
           b.addEventListener("click", open);
         });
-        overlay.querySelector("[data-pl-close]").addEventListener("click", close);
-        overlay.addEventListener("click", function (e) {
-          if (e.target === overlay) close();
+        closeBtn.addEventListener("click", close);
+        sheet.addEventListener("click", function (e) {
+          if (!e.target.closest("[data-pl-stop]") && !e.target.closest("[data-pl-close]")) close();
         });
         document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape" && overlay.dataset.open === "true") close();
+          if (e.key === "Escape" && sheet.dataset.open === "true") close();
         });
 
         select(0);

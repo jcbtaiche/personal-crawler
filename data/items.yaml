@@ -3,6 +3,26 @@
 # status: published (shown on the site) | inbox (held for review)
 # Essays are added by hand; the crawler never writes kind: essay.
 
+- id: "atoms-not-bits-2026-interview-with-jc-btaiche"
+  kind: "video"
+  title: "Interview with JC Btaiche - Founder & CEO, Fuse Energy"
+  url: "https://www.youtube.com/watch?v=ysZ62AiPqto"
+  source: "Atoms Not Bits"
+  date: "2026-09-01"
+  status: "published"
+  mentions:
+    - "name"
+    - "fuse"
+- id: "nuclecast-2026-from-fusion-dreams-to-defense-reality"
+  kind: "video"
+  title: "JC Btaiche: From Fusion Dreams to Defense Reality"
+  url: "https://www.youtube.com/watch?v=gQN1Q6PC_GU"
+  source: "NucleCast"
+  date: "2026-08-31"
+  status: "published"
+  mentions:
+    - "name"
+    - "fuse"
 - id: "springer-science-and-business-media-llc-2026-exceeding-1012-d-d-flash-ne"
   kind: "research"
   title: "Exceeding 1012 D-D flash neutrons in the 4.5-MA 1-MJ dense plasma focus FAETON-X"
