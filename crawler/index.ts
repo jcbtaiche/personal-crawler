@@ -72,6 +72,14 @@ function toItem(candidate: Candidate, config: CrawlerConfig): Item | null {
   const id = makeId(candidate.source, candidate.date, candidate.title);
   const kind = classify(url, candidate.title, candidate.kindHint);
   if ((kind === "podcast" || kind === "video") && verdict.status === "inbox") return null;
+  if (kind === "research") {
+    try {
+      const host = new URL(url).hostname.replace(/^www\./, "").toLowerCase();
+      if (host !== "nature.com" && !host.endsWith(".nature.com")) return null;
+    } catch {
+      return null;
+    }
+  }
 
   return {
     id,

@@ -60,6 +60,58 @@ const photos = [
     alt: "JC Btaiche at Everest Base Camp",
   },
 ];
+const siteUrl = "https://jcbtaiche.com";
+const pageUrl = `${siteUrl}/`;
+const ogImage = `${siteUrl}/photos/btaiche-headshot.jpg`;
+const pageTitle = "JC Btaiche — Founder and CEO of Fuse";
+const pageDescription =
+  "JC Btaiche is the founder and CEO of Fuse. The company builds pulsed-power generators for radiation effects testing and fusion energy. Press, talks, papers, and photos.";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: pageUrl,
+      name: "JC Btaiche",
+      description: pageDescription,
+      inLanguage: "en",
+      publisher: { "@id": `${siteUrl}/#person` },
+    },
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}/#person`,
+      name: "JC Btaiche",
+      alternateName: [
+        "J.C. Btaiche",
+        "Jean Christoph Btaiche",
+        "Jean-Christoph Btaiche",
+        "Jean-Christophe Btaiche",
+      ],
+      jobTitle: "Founder and CEO",
+      description: pageDescription,
+      url: pageUrl,
+      image: ogImage,
+      worksFor: {
+        "@type": "Organization",
+        name: "Fuse Energy Technologies",
+        alternateName: ["Fuse", "Fuse Energy"],
+        url: "https://www.f.energy",
+      },
+      sameAs: ["https://www.f.energy", "https://x.com/JCBtaiche10", "https://github.com/jcbtaiche"],
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": `${siteUrl}/#profile`,
+      url: pageUrl,
+      name: pageTitle,
+      description: pageDescription,
+      inLanguage: "en",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      mainEntity: { "@id": `${siteUrl}/#person` },
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -67,13 +119,30 @@ const photos = [
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>JC Btaiche</title>
-    <meta
-      name="description"
-      content="JC is the Founder and CEO of Fuse, a company building pulsed-power generators for radiation effects testing and fusion energy."
-    />
-    <link rel="icon" href={`${import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + "/"}favicon.png`} type="image/png" />
-    <link rel="apple-touch-icon" href={`${import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + "/"}apple-touch-icon.png`} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <meta name="author" content="JC Btaiche" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href={pageUrl} />
+    <link rel="icon" href={`${base}favicon.png`} type="image/png" />
+    <link rel="apple-touch-icon" href={`${base}apple-touch-icon.png`} />
+    <meta name="theme-color" content="#f0eee6" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="JC Btaiche" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content="Portrait of JC Btaiche, founder and CEO of Fuse" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="profile:first_name" content="JC" />
+    <meta property="profile:last_name" content="Btaiche" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:creator" content="@JCBtaiche10" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
