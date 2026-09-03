@@ -3,6 +3,23 @@
 # status: published (shown on the site) | inbox (held for review)
 # Essays are added by hand; the crawler never writes kind: essay.
 
+- id: "prnewswire-com-2026-fuse-expands-u-s-radiation-testing-capacity-with-new"
+  kind: "press"
+  title: "Fuse Expands U.S. Radiation Testing Capacity with New Albuquerque Facility"
+  url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxPOFhhMjZkbmFPMm9vRmdFbEt6Mlg5RUY2TDNmbXpMZkdPekxZWGh5cWZwcUozY2hVRE9CQWo2dVdqcTB6dldhckU1N0llTEhjMFRVT2dpN0pUdU1QSEZDZUtQdkxubXBOUElsRXlob2hTb0loYTVGSTBsa1VWWWRhWExJdlUxZF9Ha3FlbkxSaVdrUmFQZG81THNBTXhmUTlGZlk4YnF1Y2pRVF9TNWxXaFZ2a0kyTlBJM0EtN1phcFlrNlhHajh3?oc=5"
+  source: "prnewswire.com"
+  date: "2026-04-10"
+  status: "published"
+  mentions: []
+- id: "prnewswire-com-2026-fuse-federal-subsidiary-selected-by-missile-defense-"
+  kind: "press"
+  title: "Fuse Federal Subsidiary Selected by Missile Defense Agency $151B SHIELD IDIQ Program to Support Golden Dome Defense"
+  url: "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQU2g3elpNa0xsamFDWG9wSW42R1Q1VUNQQ2NwZ0dvQlBJWUljczNIWHY0QVBqQzZPYzVoSmFMRzZTR1RTMnpBU0c5c2hMV0RMR01LRktpbEpPcmdiUXVSYkZYbXpGRUFJS2RqZS0xNmJ3cnhOeFlVVUd3bFBnY1RLVjdCdFdzMEYtbjZya0xKaU9uZjZJeUs1cndISkZzNW9BbE1QeG1mTG1vdzFuT2NaYnMxNFpXSDRpWkpKM1FpMzdnUzhKcFd0SjQwSWpZQ0kxc3ZQSERJUXBuV0cyY2o3cGhqRF9JWEdDNURvLVVUd2wyLWlQQ09FNERQYVdlTVE?oc=5"
+  source: "prnewswire.com"
+  date: "2026-02-02"
+  status: "published"
+  mentions:
+    - "fuse"
 - id: "springer-science-and-business-media-llc-2026-exceeding-1012-d-d-flash-ne"
   kind: "research"
   title: "Exceeding 1012 D-D flash neutrons in the 4.5-MA 1-MJ dense plasma focus FAETON-X"
