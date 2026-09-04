@@ -3,6 +3,15 @@
 # status: published (shown on the site) | inbox (held for review)
 # Essays are added by hand; the crawler never writes kind: essay.
 
+- id: "fox-one-2026-watch-fuse-federal-awarded-151b-contract-for-golden-dome-in"
+  kind: "press"
+  title: "Watch Fuse Federal awarded $151B contract for Golden Dome Initiative - Mornings With Maria"
+  url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxPeTh5SVgtVTlBSmVhWVlTbFR0MkFMdmljMGhlU1IyMGZxSkE1UXBHdUhpWm4zRjdJSGVIUDdvWEFRTWtKZU5MQzB1RGJiRHRUMk5fazltZ0syY1pFbHVmZGVuTGppRkUzYk1vLU93R1Q4emh4MXg0cXFTVmZ1MWp2cDNQaDRiY0lhLVhMSERrTnV3NlhsTWlIa09GUDVpT04yeHpfN3FwRzFFNERXVGpkZjJ4UQ?oc=5"
+  source: "FOX One"
+  date: "2026-04-10"
+  status: "published"
+  mentions:
+    - "fuse"
 - id: "prnewswire-com-2026-fuse-expands-u-s-radiation-testing-capacity-with-new"
   kind: "press"
   title: "Fuse Expands U.S. Radiation Testing Capacity with New Albuquerque Facility"
