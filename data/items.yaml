@@ -3,6 +3,14 @@
 # status: published (shown on the site) | inbox (held for review)
 # Essays are added by hand; the crawler never writes kind: essay.
 
+- id: "yahoo-finance-2025-sec-clears-fuse-energy-token-in-win-for-us-crypto-reg"
+  kind: "press"
+  title: "SEC Clears Fuse Energy Token in Win for US Crypto ‘Regulatory Clarity’"
+  url: "https://news.google.com/rss/articles/CBMif0FVX3lxTE5wbWp5U3V0VzNqYzZURV9hd1B1MkZuelVkTzhVVW56TTkzWkFVdDN0MDI3Z3RNQWtSb1ZsNEZhMUQ2aDlkOURjNVpDMndBSmZla1BlVmNoZjNlUGk1bllHdDVLSmpyOEU4dFBzYXVKTWhXcnMzZm94MUJ2NzVkd1U?oc=5"
+  source: "Yahoo Finance"
+  date: "2025-11-24"
+  status: "inbox"
+  mentions: []
 - id: "fox-one-2026-watch-fuse-federal-awarded-151b-contract-for-golden-dome-in"
   kind: "press"
   title: "Watch Fuse Federal awarded $151B contract for Golden Dome Initiative - Mornings With Maria"
