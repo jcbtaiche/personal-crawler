@@ -173,7 +173,7 @@ const jsonLd = {
         <div class="bio">
           <p>
             JC is the Founder and CEO of
-            <a href="https://www.f.energy">Fuse</a>. The company’s mission is to accelerate the
+            <a href="https://www.f.energy" target="_blank" rel="noopener noreferrer">Fuse</a>. The company’s mission is to accelerate the
             world’s transition to fusion energy while safeguarding humankind. Fuse builds
             pulsed-power generators that enable radiation effects testing today and are the
             building block for fusion energy.
@@ -185,7 +185,7 @@ const jsonLd = {
             peer-reviewed in Nature Scientific Reports.
           </p>
           <p>JC skipped university to build Fuse. The company has raised more than $100 million.</p>
-          <p>He flies small planes, climbs mountains, and makes tea.</p>
+          <p>He flies small planes, climbs mountains, and makes Tea.</p>
         </div>
 
         <button class="pl-shot" type="button" data-pl-open aria-haspopup="dialog">
@@ -206,7 +206,7 @@ const jsonLd = {
               <h2>{section.title}</h2>
               {list.map((item) => (
                 <p class="item">
-                  <a href={item.url}>{item.title}</a>
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">{item.title}</a>
                   <span class="meta">
                     {" "}
                     ({item.source}, {displayDate(item)})
@@ -235,7 +235,7 @@ const jsonLd = {
           <span data-pl-label></span>
           <span class="pl-dim" data-pl-dims></span>
           <span class="pl-dim" data-pl-credit></span>
-          <a data-pl-download href="" download>Download</a>
+          <a data-pl-download href="" download target="_blank" rel="noopener noreferrer">Download</a>
         </div>
       </div>
 

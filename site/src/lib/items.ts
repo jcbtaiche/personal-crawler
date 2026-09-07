@@ -53,9 +53,9 @@ export function displayDate(item: Item): string {
 }
 
 export const sections: { kind: Kind; title: string }[] = [
+  { kind: "research", title: "Technical Papers" },
   { kind: "press", title: "Press" },
-  { kind: "essay", title: "Essays" },
-  { kind: "podcast", title: "Podcasts" },
   { kind: "video", title: "Videos" },
-  { kind: "research", title: "Research Papers" },
+  { kind: "podcast", title: "Podcasts" },
+  { kind: "essay", title: "Essays" },
 ];

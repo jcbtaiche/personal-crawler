@@ -50,7 +50,7 @@ export function filterCandidate(
     // ignore invalid URLs and fall through to other checks
   }
 
-  if (/\bpr newswire\b/i.test(source)) {
+  if (/prnewswire/i.test(source) || /pr[\s.-]*newswire/i.test(source) || /prnewswire/i.test(text)) {
     return { keep: false, status: "inbox", mentions: [], reason: "company_release" };
   }
 
