@@ -3,6 +3,14 @@
 # status: published (shown on the site) | inbox (held for review)
 # Essays are added by hand; the crawler never writes kind: essay.
 
+- id: "tech-funding-news-2025-revolut-alums-fuse-energy-hits-5b-valuation-to-re"
+  kind: "press"
+  title: "Revolut alums’ Fuse Energy hits $5B valuation to reshape power market"
+  url: "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPNWtXMTVHbnBaVDRVN3pVQVh2ejI1MzdhMXh6Z3Y4TXlwS0VEazctdmFCbUxWWnhxbVFPMVRRSVZyTV9KZlZkamlKWk95ZnQ1a1hpa2s1eWNiYzFwUVI5eGRmZG9ySnZKNnRJYzBzenAxNlJ1Y0VYbUdGaHJfSkc4aVlvZGZOZWpvSzdKRVFtNlRWVTh5Qk9JS3l3THdaSHc3ZEstRmIwalhBTUtTcEFoWFhEZ3ZpSTBIYmhj?oc=5"
+  source: "Tech Funding News"
+  date: "2025-11-24"
+  status: "inbox"
+  mentions: []
 - id: "yahoo-finance-2025-sec-clears-fuse-energy-token-in-win-for-us-crypto-reg"
   kind: "press"
   title: "SEC Clears Fuse Energy Token in Win for US Crypto ‘Regulatory Clarity’"
