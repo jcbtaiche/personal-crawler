@@ -3,6 +3,15 @@
 # status: published (shown on the site) | inbox (held for review)
 # Essays are added by hand; the crawler never writes kind: essay.
 
+- id: "the-defense-post-2026-fuse-energy-to-build-radiation-testing-facility-in"
+  kind: "press"
+  title: "Fuse Energy to Build Radiation Testing Facility in New Mexico"
+  url: "https://news.google.com/rss/articles/CBMiigFBVV95cUxNRnVjRHVMNDQ4WVVuQ1VhWmVBWEJNV1FUeFUxS2lNbFZqSnFkSEdGOWdyRjVRUGJ1WXg3UjAxVFp4dFNhNFU4N0pJRU1BVkxxVDFOdGFLUkJMYmMyQ252dXRZRkk1S21qY1ptS1NYUlZtZFVRMVVMRWNrOU5KajZFZzJMSThKRjlPNmfSAY8BQVVfeXFMT29idFI4bklSckVDWF9TZG5Wb2hWUm5EQVc0cE1tYUdDYWFYQmN3WTg1OVJVSmF6aWo3N3RveU1kOV85ZE5TYUNCNlVaX1BHSXNTcXpoZjNPTzNOYk5UZUFmMzQ2SlFRX3plTDZOU0hqemlVeUx1TUxHeTNna3NHdURvb0VJbUg4Ykc3WFBrZzQ?oc=5"
+  source: "The Defense Post"
+  date: "2026-04-14"
+  status: "published"
+  mentions:
+    - "fuse"
 - id: "tech-funding-news-2025-revolut-alums-fuse-energy-hits-5b-valuation-to-re"
   kind: "press"
   title: "Revolut alums’ Fuse Energy hits $5B valuation to reshape power market"
